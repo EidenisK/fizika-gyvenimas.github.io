@@ -22,7 +22,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-auth.js"></script>
-  <script type="text/javascript" src="./js/db.js"></script>
+  <script type="text/javascript" src="./js/admin.js"></script>
 </head>
 
 <body>
@@ -56,12 +56,61 @@
    </nav>
  </header>
 
- <div class="section-container">
+ <div class="section-container" id="main-login">
    <div class="container">
-     <h1>Naudingos nuorodos</h1>
-     <ul id="link-list"></ul>
+
    </div>
  </div>
+
+<div class="section-container" id="main-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Prisijungimas</h1>
+        Slaptažodis<br>
+        <input type="text" id="login-pass"><button id="login-button">Prisijungti</button><br>
+        <p id="login-status">Būsena: laukiama...</p>
+      </div>
+      <div class="col-md-6">
+        <h1>Pridėti</h1>
+        <div class="row">
+          <div class="col-md-4">
+            Pavadinimas
+          </div>
+          <div class="col-md-8">
+            <input type="text" id="sendTextInput">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            Nuoroda
+          </div>
+          <div class="col-md-8">
+            <input type="text" id="sendLinkInput">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <p id="text_status">Būsena: laukiama...</p>
+          </div>
+          <div class="col-md-8">
+            <button id="sendTextButton">Siųsti</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="section-container" id="main-list">
+  <div class="container">
+    <h1>Sąrašas</h1>
+    <ul id="link-list"></ul>
+    <button id="load">Atnaujinti</button>
+  </div>
+</div>
 
  <footer>
      <div class="section-container footer-container">
@@ -74,13 +123,12 @@
                          Eidenis Kasperavičius - @gmail.com<br>
                          Lukas Rimkus - @gmail.com<br>
                      </div>
-                     <div class="col-md-4">
-                       <h4><a href="./admin.html">Prisijungimas</a></h4>
-                     </div>
              </div>
          </div>
      </div>
  </footer>
 
+<script type="text/javascript" src="./js/index.js"></script>
 </body>
+
 </html>
