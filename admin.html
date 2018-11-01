@@ -23,6 +23,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-auth.js"></script>
   <script type="text/javascript" src="./js/admin.js"></script>
+  <link href="./css/universal.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,13 +66,13 @@
 <div class="section-container" id="main-list">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4 admin-col" id="login_row">
         <h1>Prisijungimas</h1>
         Slaptažodis<br>
         <input type="text" id="login-pass"><button id="login-button">Prisijungti</button><br>
         <p id="login-status">Būsena: laukiama...</p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 admin-col" id="edit_row">
         <h1>Pridėti</h1>
         <div class="row">
           <div class="col-md-4">
@@ -98,35 +99,30 @@
           </div>
         </div>
       </div>
+      <div cklass="col-md-8 admin-col" id="link-list-main">
+        <h1>Sąrašas</h1>
+        <ul id="link-list"></ul>
+        <button id="load">Atnaujinti</button>
+      </div>
     </div>
   </div>
 </div>
 
-<hr>
-
-<div class="section-container" id="main-list">
-  <div class="container">
-    <h1>Sąrašas</h1>
-    <ul id="link-list"></ul>
-    <button id="load">Atnaujinti</button>
-  </div>
-</div>
-
- <footer>
-     <div class="section-container footer-container">
-         <div class="container">
-             <div class="row">
-                     <div class="col-md-4">
-                         <h4>Susisiekite</h4>
-                         Julija Bendikaitė - @gmail.com<br>
-                         Gytis Kalvis - @gmail.com<br>
-                         Eidenis Kasperavičius - @gmail.com<br>
-                         Lukas Rimkus - @gmail.com<br>
-                     </div>
-             </div>
-         </div>
-     </div>
- </footer>
+<footer>
+    <div class="section-container footer-container">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-4">
+                        <h4>Susisiekite</h4>
+                        Julija Bendikaitė - julija.bendikaite@gmail.com<br>
+                        Gytis Kalvis - gytis.kalvis@gmail.com<br>
+                        Eidenis Kasperavičius - eidenis.gargzdai@gmail.com<br>
+                        Lukas Rimkus - lukas.rimkus2001@gmail.com<br>
+                    </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script type="text/javascript" src="./js/index.js"></script>
 </body>

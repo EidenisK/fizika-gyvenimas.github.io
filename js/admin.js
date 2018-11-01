@@ -23,12 +23,17 @@ $(document).ready(function() {
   const mainListContainer = document.querySelector('#main-list');
   const mainLoginContainer = document.querySelector('#main-login');
 
-  loadMessages();
+  $('#edit_row').hide();
+  $('#link-list-main').hide();
 
   loginButton.addEventListener("click", function(e) {
     var pass = loginPassword.value;
     firebase.auth().signInWithEmailAndPassword('eidenis.gargzdai@gmail.com', pass).then(function() {
       loginStatus.innerHTML = "Būsena: PRISIJUNGTA";
+      $('#edit_row').show();
+      $('#login_row').hide();
+      $('#link-list-main').show();
+      loadMessages();
     }).catch(function(error) {
       // Handle Errors here.
       loginStatus.innerHTML = "Būsena: KLAIDA - " + error.message;
@@ -75,7 +80,7 @@ function loadMessages() {
       list.innerHTML = "";
       snap.forEach(function(doc) {
         if(doc.data().name != "sample") {
-          var text = '<li><a href="' + doc.data().link + '">' + doc.data().name + "</a>" + '<u onclick="delete_messages(' + "'" + doc.id + "'" + ')">IŠTRINTI</u></li>';
+          var text = '<li><a href="' + doc.data().link + '">' + doc.data().name + "</a>" + ' <u onclick="delete_messages(' + "'" + doc.id + "'" + ')">IŠTRINTI</u></li>';
           list.innerHTML += text;
         }
       });
