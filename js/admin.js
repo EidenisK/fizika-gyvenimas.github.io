@@ -62,7 +62,7 @@ $(document).ready(function() {
     }
 
     text_status.innerHTML = "Būsena: SIUNČIAMA";
-    var docRef = firestore.doc("nuorodos/" + linkText.value);
+    var docRef = firestore.doc("nuorodos/" + inputText.value);
     docRef.set( {
       name: inputText.value,
       link: linkText.value
