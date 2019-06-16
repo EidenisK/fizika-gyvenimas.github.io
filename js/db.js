@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyCKicExv6QeyIA3F67nQleHmq_OL_GwsoQ",
-  authDomain: "fizika-tai-gyvenimas.firebaseapp.com",
-  databaseURL: "https://fizika-tai-gyvenimas.firebaseio.com",
-  projectId: "fizika-tai-gyvenimas",
-  storageBucket: "fizika-tai-gyvenimas.appspot.com",
-  messagingSenderId: "814832455967"
+  apiKey: "AIzaSyAMNdtWVeedQ0-NOBTDPZpxVZcpxMcTnFE",
+  authDomain: "eidenisk-data-collection.firebaseapp.com",
+  databaseURL: "https://eidenisk-data-collection.firebaseio.com",
+  projectId: "eidenisk-data-collection",
+  storageBucket: "eidenisk-data-collection.appspot.com",
+  messagingSenderId: "295312564384"
 };
 firebase.initializeApp(config);
 
