@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
 
 const firestore = firebase.firestore();
-const settings = {/* your settings... */ timestampsInSnapshots: true};
+const settings = {timestampsInSnapshots: true};
 firestore.settings(settings)
 firebase.auth().signOut();
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
     }
 
     text_status.innerHTML = "Būsena: SIUNČIAMA";
-    var docRef = firestore.doc("nuorodos/" + inputText.value);
+    var docRef = firestore.doc("8WGcnyFV0zfyFom12JzWOEGMODs2/" + inputText.value);
     docRef.set( {
       name: inputText.value,
       link: linkText.value
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 function loadMessages() {
   var list = document.querySelector('#link-list');
-  firestore.collection('nuorodos').get().then(function(snap) {
+  firestore.collection('8WGcnyFV0zfyFom12JzWOEGMODs2').get().then(function(snap) {
       list.innerHTML = "";
       snap.forEach(function(doc) {
         if(doc.data().name != "sample") {
@@ -88,6 +88,6 @@ function loadMessages() {
 }
 
 function delete_messages(document_id) {
-  firestore.doc("nuorodos/" + document_id).delete();
+  firestore.doc("8WGcnyFV0zfyFom12JzWOEGMODs2/" + document_id).delete();
   loadMessages();
 }

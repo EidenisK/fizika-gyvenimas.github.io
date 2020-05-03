@@ -10,7 +10,7 @@ var config = {
 firebase.initializeApp(config);
 
 const firestore = firebase.firestore();
-const settings = {/* your settings... */ timestampsInSnapshots: true};
+const settings = {timestampsInSnapshots: true};
 firestore.settings(settings)
 firebase.auth().signOut();
 
@@ -21,7 +21,7 @@ var loginStatus = document.querySelector("#login-status");
 $(document).ready(function() {
   const list = document.querySelector('#link-list');
   list.innerHTML = "";
-  firestore.collection('nuorodos').get().then(function(snap) {
+  firestore.collection('8WGcnyFV0zfyFom12JzWOEGMODs2').get().then(function(snap) {
     snap.forEach(function(doc) {
       if(doc.data().name != "sample") {
         var text = '<li><a href="' + doc.data().link + '">' + doc.data().name + "</a></li>";
